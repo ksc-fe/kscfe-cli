@@ -2,7 +2,7 @@ const cli_table = require("cli-table");
 const chalk = require("chalk");
 
 const table = new cli_table({
-  head: ["Project name", "Owner", "Branch", "From"],
+  head: ["Template name", "Owner", "Branch", "From"],
   style: {
     head: ["green"]
   }
