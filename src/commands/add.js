@@ -9,13 +9,13 @@ async function addTemplate() {
     {
       type: "input",
       name: "name",
-      message: "Set the custom name of the template:",
+      message: "设置项目模版名称:",
       validate(val) {
         let result = true;
         if (!val) {
-          result = "Template name cannot be empty.";
+          result = "模版名称不能为空.";
         } else if (tplList.some(({ name }) => name === val)) {
-          result = `Template with name "${val}" is exist.`;
+          result = `模版名称 "${val}" 已存在.`;
         }
         return result;
       }
@@ -23,7 +23,7 @@ async function addTemplate() {
     {
       type: "list",
       name: "from",
-      message: "Where is the template from?",
+      message: "模板来源?",
       choices: ["GitHub", "GitLab", "Bitbucket", "Others"]
     },
     {
@@ -44,7 +44,7 @@ async function addTemplate() {
     {
       type: "input",
       name: "path",
-      message: "Owner/name of the template:",
+      message: "模版Owner:",
       when: ({ from }) => {
         if (!["GitHub", "GitLab", "Bitbucket"].includes(from)) {
           return false;
@@ -62,7 +62,7 @@ async function addTemplate() {
     {
       type: "input",
       name: "branch",
-      message: "Branch of the template:",
+      message: "模版分支:",
       default: "master",
       when: ({ from }) => {
         if (!["GitHub", "GitLab", "Bitbucket"].includes(from)) {
@@ -84,7 +84,7 @@ async function addTemplate() {
       };
       await DB.insert(template);
       const newList = await DB.find({});
-      listTable(newList, "New template has been added successfully!");
+      listTable(newList, "模版名称创建成功!");
     }
   );
 }

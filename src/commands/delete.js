@@ -9,7 +9,7 @@ async function deleteTemplate() {
     {
       type: "rawlist",
       name: "name",
-      message: "Select a template to delete:",
+      message: "选择删除的模板:",
       choices: () =>
         tplList.map(tpl => {
           return {
@@ -23,7 +23,7 @@ async function deleteTemplate() {
   prompt(questions).then(async ({ name }) => {
     await DB.remove({ name });
     const newList = await DB.find({});
-    listTable(newList, "New templates has been updated successfully!");
+    listTable(newList, "模板删除成功!");
   });
 }
 
