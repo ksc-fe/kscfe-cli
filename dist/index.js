@@ -48,7 +48,7 @@ let DB = /** @class */ (function() {
 var db_1 = DB;
 
 const table = new cliTable({
-  head: ["项目名称", "创建人/Owner", "分支", "来源"],
+  head: ["Project name", "Owner", "Branch", "From"],
   style: {
     head: ["green"]
   }
