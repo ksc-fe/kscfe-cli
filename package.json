@@ -1,5 +1,5 @@
 {
-  "name": "kscfe-cli",
+  "name": "ksyun-fe-cli",
   "version": "1.0.0",
   "description": "a cli tool for ksc fe group",
   "bin": {

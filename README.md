@@ -5,7 +5,7 @@
 Install **kscfe** globaly.
 
 ```bash
-npm install kscfe-cli -g
+npm install ksyun-fe-cli -g
 ```
 
 Check the `--help` command.
