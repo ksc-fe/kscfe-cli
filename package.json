@@ -1,7 +1,7 @@
 {
   "name": "ksc-fe-cli",
   "version": "1.0.0",
-  "description": "a cli tool for ksc data fe group",
+  "description": "a cli tool for ksc storage fe group",
   "bin": {
     "kscfe": "bin/kscfe"
   },
