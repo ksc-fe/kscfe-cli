@@ -48,7 +48,7 @@ let DB = /** @class */ (function() {
 var db_1 = DB;
 
 const table = new cliTable({
-  head: ["Project name", "Owner", "Branch", "From"],
+  head: ["Template name", "Owner", "Branch", "From"],
   style: {
     head: ["green"]
   }
