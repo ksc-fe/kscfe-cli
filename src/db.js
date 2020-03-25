@@ -1,6 +1,6 @@
-const nedb = require("nedb");
+const datastore = require("nedb");
 const path = require("path");
-const db = new nedb["default"]({
+const db = new datastore({
   filename: path.resolve(__dirname, "./db"),
   autoload: true
 });

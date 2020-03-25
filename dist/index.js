@@ -14,7 +14,7 @@ require('download-git-repo');
 var ncp$1 = _interopDefault(require('ncp'));
 var child_process = _interopDefault(require('child_process'));
 
-const db = new nedb["default"]({
+const db = new nedb({
   filename: path.resolve(__dirname, "./db"),
   autoload: true
 });
@@ -48,7 +48,7 @@ let DB = /** @class */ (function() {
 })();
 var db_1 = DB;
 
-const table = new cliTable["default"]({
+const table = new cliTable({
   head: ["项目名称", "创建人/Owner", "分支", "来源"],
   style: {
     head: ["green"]
@@ -210,7 +210,7 @@ var _delete = deleteTemplate;
 var commonjsGlobal = typeof globalThis !== 'undefined' ? globalThis : typeof window !== 'undefined' ? window : typeof global !== 'undefined' ? global : typeof self !== 'undefined' ? self : {};
 
 const ncp = ncp$1.ncp;
-const spinner = ora["defalut"]("Downloading template...");
+const spinner = ora("Downloading template...");
 const exec = child_process.exec;
 
 var __awaiter =
@@ -389,19 +389,6 @@ let doDownload = function(from, dist) {
       console.log(`\n cd ${projectName} && npm install \n`);
       resolve({ status: 1, msg: "新项目成功创建! 位于目录 \n" + dist });
 
-      // download(from, dist, function(err) {
-      //   if (err) {
-      //     reject({
-      //       status: 0,
-      //       msg: err
-      //     });
-      //   }
-      //   spinner.stop();
-      //   resolve({
-      //     status: 1,
-      //     msg: "新项目成功创建! 位于目录 \n" + dist
-      //   });
-      // });
     });
   });
 };
@@ -460,8 +447,8 @@ var initiator = function(Download) {
         case 6:
           console.log(
             result.status
-              ? chalk["default"].green(result.msg)
-              : chalk["default"].red(result.msg)
+              ? chalk.green(result.msg)
+              : chalk.red(result.msg)
           );
           return [2 /*return*/];
       }
